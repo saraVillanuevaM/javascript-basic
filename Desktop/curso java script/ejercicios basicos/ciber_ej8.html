@@ -8,15 +8,62 @@
 <script>
 /* ejercicio 8 function */
 
+var repetir=("si");
 
-function calculadora(n1,n2){
-console.log(n1-n2);
-console.log(n1+n2);
-console.log(n1*n2);
+function suma(n1,n2){
+alert(n1+n2);
 }
 
-calculadora(40,20);
+function resta(n1,n2){
+alert(n1-n2);
+}
 
+function multiplicacion(n1,n2){
+alert(n1*n2);
+}
+
+function division(n1,n2){
+alert(n1/n2);
+}
+
+
+do{
+var operacion=prompt("¿Qué operación matemática deseas realizar?, utiliza solo símbolo");
+var operacion1=parseInt(prompt("Introduce primer Nº"));
+var operacion2=parseInt(prompt("Introduce segundo Nº"));
+
+if(operacion=="+"){
+
+    suma(operacion1,operacion2);
+
+}
+
+else if(operacion=="-"){
+
+resta(operacion1,operacion2);
+
+}
+
+else if(operacion=="*"){
+
+multiplicacion(operacion1,operacion2);
+
+}
+
+else if(operacion=="/"){
+
+division(operacion1,operacion2);
+
+}
+
+else{ 
+    
+    alert ("operación no computada");
+}
+
+
+repetir=prompt("¿Deseas realizar otra operación? si/no")
+}while (repetir=="si");
 
 </script>
 
