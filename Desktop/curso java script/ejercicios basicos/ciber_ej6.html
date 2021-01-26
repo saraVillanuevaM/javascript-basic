@@ -8,7 +8,9 @@
 <script>
 /* ejercicio 6 */
 
-var color_coche = `Tinc un cotxe de color ${"blau"}.`;
+const tinc="Tinc un cotxe de color blau";
+const color_car=(color)=> `Tinc un cotxe de color ${color}.`;
+
 </script>
 
 </head>
@@ -18,21 +20,30 @@ var color_coche = `Tinc un cotxe de color ${"blau"}.`;
 
 <script>
         /* uso de string template para personalizar un termino */
-    document.write(color_coche);
+        document.write(color_car("blau"));
 </script>
     
 <br>
 <script>
-    var color_coche = `Tinc un cotxe de color ${"verd"}.`;
-    document.write(color_coche);
+   
+document.write(color_car("verd"));
+   
+
 </script>
 <br>
 <script>
 
     /* remplazar la "o" por la "u" en el string */
-var color_coche = `Tinc un cotxe de color ${"verd"}.`;
-color_coche=color_coche.replace(/o/g,"u");
-document.write(color_coche);
+
+const sus = /o/i;
+document.write(tinc.replace(sus,'u'));
+
+
+// var color_coche = `Tinc un cotxe de color ${"verd"}.`;
+// color_coche=color_coche.replace(/o/g,"u");
+// document.write(color_coche);
+
+
 </script>
 
 </body>
