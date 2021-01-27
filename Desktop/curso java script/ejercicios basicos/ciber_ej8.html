@@ -5,72 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ciber8</title>
 
-<script>
-/* ejercicio 8 function */
 
-var repetir=("si");
-
-function suma(n1,n2){
-alert(n1+n2);
-}
-
-function resta(n1,n2){
-alert(n1-n2);
-}
-
-function multiplicacion(n1,n2){
-alert(n1*n2);
-}
-
-function division(n1,n2){
-alert(n1/n2);
-}
-
-
-do{
-var operacion=prompt("¿Qué operación matemática deseas realizar?, utiliza solo símbolo");
-var operacion1=parseInt(prompt("Introduce primer Nº"));
-var operacion2=parseInt(prompt("Introduce segundo Nº"));
-
-if(operacion=="+"){
-
-    suma(operacion1,operacion2);
-
-}
-
-else if(operacion=="-"){
-
-resta(operacion1,operacion2);
-
-}
-
-else if(operacion=="*"){
-
-multiplicacion(operacion1,operacion2);
-
-}
-
-else if(operacion=="/"){
-
-division(operacion1,operacion2);
-
-}
-
-else{ 
-    
-    alert ("operación no computada");
-}
-
-
-repetir=prompt("¿Deseas realizar otra operación? si/no")
-}while (repetir=="si");
-
-</script>
 
 </head>
 <body>
 
+    <h1>Ejercicio 8 Calculator</h1>
+
+    <input type="text" id="n1" placeholder="n1"><br>
+    <input type="text" id="n2" placeholder="n2">
+   
+    <select id="calculos">
+
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+
+    </select>
+        
+    <button id="calculadora">Calcular</button><br>
+
+  
+    <output id="resultado" style="color: blue; font-family:sans-serif; font-size: 100px;"></output> 
+    <script>
+        
+    document.querySelector('#calculadora').addEventListener('click', () =>{
+    const n1 = parseInt(document.querySelector('#n1').value);
+    const n2 = parseInt(document.querySelector('#n2').value);
+    const operador = document.querySelector('#calculos').value;
+    let r;
     
-<h1>Ejercicio 8 Calculator con prompt </h1>
+     if(operador == '+'){
+     r = n1 + n2;
+    }else if( operador == '-'){
+     r = n1 - n2;
+    }else if(operador == '*'){
+     r = n1 * n2;
+    }else if(operador == '/'){
+     r = n1 / n2;
+    }
+    document.querySelector('#resultado').innerHTML = r;
+    });
+    
+    </script>
+
+
+
+    
+
 </body>
 </html>
